@@ -1,4 +1,11 @@
-
+/**Server.java
+ * @author Montana Wong
+ * @author Justin Tumale
+ * @author Matthew Haneburger
+ * This is the main server class that includes the main method. It listens for incoming
+ * connections and creates ServerThreads to handle those connections.
+ * 
+*/
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.io.IOException;
@@ -20,7 +27,11 @@ public class Server {
 	public Server(int port){
 		this.port = port;
 	}
-	
+	/*
+		Shows prompt that server is running when the connection goes through.
+		Listens for clients and creates threads. infinite loops while the program
+		is under execution.
+	*/
 	public void run(){
 		System.out.println("Server is running");
 		//create a socket
@@ -58,7 +69,9 @@ public class Server {
 		
 	}
 
-	
+	/*
+	@params args
+	*/
 	public static void main(String[] args){
 		
 		boolean DEVELOPMENT = false;
